@@ -19,11 +19,7 @@ webapp.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # maximum size 1 MB
 webapp.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
-### config for db connection
-# webapp.config['MYSQL_HOST'] = "localhost"
-# webapp.config['MYSQL_USER'] = "root"
-# webapp.config['MYSQL_PASSWD'] = "1234567"
-# webapp.config['MYSQL_DATABASE'] = "test1db"
+
 
 ### mem-cache
 webapp.config['MEM_CACHE_REQUEST_PREFIX'] = "http://localhost:5001/"

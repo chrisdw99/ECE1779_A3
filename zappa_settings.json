@@ -4,7 +4,7 @@
         "profile_name": "default",
         "project_name": "ece1779-a3",
         "runtime": "python3.8",
-        "s3_bucket": "zappa-*",
+        "s3_bucket": "*",
         "aws_region": "us-east-1",
         "keep_warm":true,
         "keep_warm_expression":"rate(14 minutes)",
