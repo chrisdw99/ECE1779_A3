@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ECE1779 Project 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+</head>
+<html>
+
+<body>
+    <p>
+    <h1>Residents Administration System</h1>
+    <div class="leftbar">
+        <ul>
+            {% if current_user.admin %}
+            <li><a href="{{url_for('residents')}}">Show all residents</a></li>
+            <li><a href="{{url_for('find_resident')}}">Find the resident</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% elif current_user.is_authenticated %}
+
+            <li><a href="{{url_for('show_personal')}}">Show personal information</a></li>
+            <li><a href="{{url_for('add_resident')}}">Update my information </a></li>
+            <li><a href="{{url_for('add_vaccine_receipt')}}">Add vaccine certificate</a></li>
+            <li><a href="{{url_for('add_resident_image')}}">Update infor by image</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('change_password') }}">Change password</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="content"></div>
+    <h1>table</h1>
+    </p>
+
+    <body>
+
+</html>

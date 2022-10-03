@@ -1,0 +1,18 @@
+{
+    "dev": {
+        "app_function": "app.webapp",
+        "profile_name": "default",
+        "project_name": "ece1779-a3",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-*",
+        "aws_region": "us-east-1",
+        "keep_warm":true,
+        "keep_warm_expression":"rate(14 minutes)",
+        "role_name":"ZappaBasicLambdaExecutionRole",
+        "role_arn":"arn:aws:iam::*:role/ZappaBasicLambdaExecutionRole",
+        "timeout_seconds":60,
+        "touch":true,
+        "touch_path":"/",
+        "use_precompiled_packages":true
+    }
+} 

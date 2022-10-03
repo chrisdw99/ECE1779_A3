@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ECE1779 Project 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+</head>
+<html>
+
+<body>
+    <p>
+    <h1>Residents Administration System</h1>
+    <h3>Register</h3>
+    <div class="Input">
+        <form name="Register" action="{{ url_for ('register') }}" method="post">
+            <p><input class="loginshort" type="text" name="email" placeholder="Enter email address" required />
+            </p>
+            <p>
+                <input class="loginshort" type="password" name="password" placeholder="Enter password" required />
+            </p>
+            <p>
+                <input class="buttun" type="submit" value="register" />
+            </p>
+            <a href="{{ url_for ('login') }}">Back to login in</a>
+            <p>{{message}}</p>
+        </form>
+    </div>
+    </p>
+
+</body>
+
+</html>

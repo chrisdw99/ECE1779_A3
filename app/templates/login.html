@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ECE1779 Project 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
+</head>
+<html>
+
+<body>
+    <p>
+    <h1>Residents Administration System</h1>
+    <h3>Sign in</h3>
+    <div class="Input">
+        <form name="login" action="{{ url_for ('login') }}" method="post">
+            <p><input class="loginshort" type="text" name="email" placeholder="Enter email" required />
+            </p>
+            <p>
+                <input class="loginshort" type="password" name="password" placeholder="Enter password" required />
+            </p>
+            <p>
+                <input class="buttun" type="submit" value="sign in" />
+            </p>
+            <a href="{{ url_for ('register') }}">I don't have account.</a>
+            <p>
+            <ul>
+                <li>{{message}}</li>
+            </ul>
+            </p>
+        </form>
+    </div>
+    </p>
+
+</body>
+
+<!--
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+</html>
+-->
